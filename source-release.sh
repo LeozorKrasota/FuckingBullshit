@@ -1,6 +1,7 @@
 #!/bin/sh
 
 #move to script directory so all relative paths work
+echo "Install Freeswitch from sources"
 cd "$(dirname "$0")"
 
 #includes
@@ -20,19 +21,19 @@ apt install -y libavformat-dev libswscale-dev libvlc-dev python3-distutils sox l
 
 #install dependencies that depend on the operating system version
 if [ ."$os_codename" = ."stretch" ]; then
-        verbose "Operationg system codename stretch"
+        echo "Operationg system codename stretch"
         apt install -y libvpx4 swig3.0
 fi
 if [ ."$os_codename" = ."buster" ]; then
-        verbose "Operationg system codename buster"
+        echo "Operationg system codename buster"
         apt install -y libvpx5 swig3.0
 fi
 if [ ."$os_codename" = ."bullseye" ]; then
-        verbose "Operationg system codename bullseye"
+        echo "Operationg system codename bullseye"
         apt install -y libvpx6 swig4.0
 fi
 if [ ."$os_codename" = ."trixie" ]; then
-        verbose "Operationg system codename trixie"
+        echo "Operationg system codename trixie"
         apt install -y libvpx6 swig4.0
 fi
 
