@@ -7,6 +7,7 @@ cd "$(dirname "$0")"
 #includes
 . ./config.sh
 . ./environment.sh
+. ./colors.sh
 
 if [ .$switch_source = .true ]; then
     echo "Fucking shit number one"
