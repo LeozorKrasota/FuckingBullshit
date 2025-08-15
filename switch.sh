@@ -1,6 +1,7 @@
 #!/bin/sh
 
 #move to script directory so all relative paths work
+verbose "Start installing Freeswitch"
 cd "$(dirname "$0")"
 
 #includes
