@@ -35,7 +35,7 @@ if [ ."$os_codename" = ."bullseye" ]; then
 fi
 if [ ."$os_codename" = ."trixie" ]; then
         echo "Operationg system codename trixie"
-        apt install -y libvpx6 swig4.0
+        apt install -y libvpx6 swig
 fi
 
 # additional dependencies
