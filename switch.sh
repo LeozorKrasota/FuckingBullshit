@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #move to script directory so all relative paths work
-verbose "Start installing Freeswitch"
+echo "Start installing Freeswitch"
 cd "$(dirname "$0")"
 
 #includes
@@ -9,12 +9,12 @@ cd "$(dirname "$0")"
 . ./environment.sh
 
 if [ .$switch_source = .true ]; then
-    verbose "Fucking shit number one"
+    echo "Fucking shit number one"
 	if [ ."$switch_branch" = "master" ]; then
-		verbose "Start script switch/source-master.sh"
+		echo "Start script switch/source-master.sh"
 		switch/source-master.sh
 	else
-		verbose "Start script switch/source-release.sh"
+		echo "Start script switch/source-release.sh"
 		switch/source-release.sh
 	fi
 
@@ -34,21 +34,21 @@ if [ .$switch_source = .true ]; then
 fi
 
 if [ .$switch_package = .true ]; then
-    verbose "Fucking shit number two"
+    echo "Fucking shit number two"
 	if [ ."$switch_branch" = "master" ]; then
 		if [ .$switch_package_all = .true ]; then
-			verbose "Start script switch/package-master-all.sh"
+			echo "Start script switch/package-master-all.sh"
 			switch/package-master-all.sh
 		else
-			verbose "Start script switch/package-master.sh"
+			echo "Start script switch/package-master.sh"
 			switch/package-master.sh
 		fi
 	else
 		if [ .$switch_package_all = .true ]; then
-			verbose "Start script switch/package-all.sh"
+			echo "Start script switch/package-all.sh"
 			switch/package-all.sh
 		else
-			verbose "Start script switch/package-release.sh"
+			echo "Start script switch/package-release.sh"
 			switch/package-release.sh
 		fi
 	fi
