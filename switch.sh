@@ -9,6 +9,7 @@ cd "$(dirname "$0")"
 . ./environment.sh
 
 if [ .$switch_source = .true ]; then
+    verbose "Fucking shit number one"
 	if [ ."$switch_branch" = "master" ]; then
 		verbose "Start script switch/source-master.sh"
 		switch/source-master.sh
@@ -33,6 +34,7 @@ if [ .$switch_source = .true ]; then
 fi
 
 if [ .$switch_package = .true ]; then
+    verbose "Fucking shit number two"
 	if [ ."$switch_branch" = "master" ]; then
 		if [ .$switch_package_all = .true ]; then
 			verbose "Start script switch/package-master-all.sh"
