@@ -7,7 +7,7 @@ cd "$(dirname "$0")"
 #includes
 . ../config.sh
 . ../environment.sh
-. ./colors.sh
+. ../colors.sh
 
 #upgrade packages
 apt update && apt upgrade -y
